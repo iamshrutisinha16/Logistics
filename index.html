@@ -49,7 +49,7 @@
                 <a href="#" class="util-link" data-key="search"><i class="fas fa-search"></i> Search</a>
                 <a href="#" class="util-link" data-key="notifications"><i class="fas fa-bell"></i> Notifications</a>
                 <a href="#" class="util-link" data-key="support"><i class="fas fa-question-circle"></i> Support</a>
-                <a href="#contact" class="util-link" data-key="contact"><i class="far fa-comment-alt"></i> Contact Us</a>
+                <a href="contact.html" class="util-link" data-key="contact"><i class="far fa-comment-alt"></i> Contact Us</a>
 
                 <!-- Mobile Hamburger -->
                 <div class="hamburger" id="mobile-menu-btn">
@@ -77,7 +77,7 @@
                     </a>
 
                     <ul class="dropdown-menu">
-                        <li><a href="#freight" data-key="freight">Freight Forwarding</a></li>
+                        <li><a href="freight.html"  class="nav-item"  data-key="freight">Freight Forwarding</a></li>
                         <li><a href="#warehousing" data-key="warehousing">Warehousing</a></li>
                         <li><a href="#supply-chain" data-key="supply_chain">Supply Chain</a></li>
                         <li><a href="#express" data-key="express">Express Delivery</a></li>
@@ -504,6 +504,24 @@
         <div class="footer-col">
             <h3>Get In Touch</h3>
             <ul class="contact-info">
+
+                 
+                <!-- Phone -->
+                <li>
+                    <i class="fas fa-phone-alt icon"></i>
+                    <div class="text">
+                        <strong>Phone:</strong>
+                        <p><a href="tel:9306503035">+91 93065 03035</a></p>
+                    </div>
+                </li>
+                 <!-- Email -->
+                <li>
+                    <i class="fas fa-envelope icon"></i>
+                    <div class="text">
+                        <strong>Email:</strong>
+                        <p><a href="mailto:Sumittranslogistics580@gmail.com">Sumittranslogistics580@gmail.com</a></p>
+                    </div>
+                </li>
                 <!-- Address -->
                 <li>
                     <i class="fas fa-map-marker-alt icon"></i>
@@ -514,24 +532,6 @@
                             Near Om Dharam Kanta, Tpt Nagar,<br>
                             Faridabad.
                         </p>
-                    </div>
-                </li>
-                
-                <!-- Phone -->
-                <li>
-                    <i class="fas fa-phone-alt icon"></i>
-                    <div class="text">
-                        <strong>Phone:</strong>
-                        <p><a href="tel:9306503035">+91 93065 03035</a></p>
-                    </div>
-                </li>
-
-                <!-- Email -->
-                <li>
-                    <i class="fas fa-envelope icon"></i>
-                    <div class="text">
-                        <strong>Email:</strong>
-                        <p><a href="mailto:Sumittranslogistics580@gmail.com">Sumittranslogistics580@gmail.com</a></p>
                     </div>
                 </li>
             </ul>
@@ -558,8 +558,22 @@
         </div>
     </div>
 </footer>
-<!-- FOOTER SECTION END -->
+<!-- PROFESSIONAL FULL SCREEN SEARCH OVERLAY -->
+<div id="full-screen-search" class="search-overlay">
+    <button class="close-search-btn" id="btn-close-search">&times;</button>
+    
+    <div class="search-center-box">
+        <h3 class="search-title">What are you looking for?</h3>
+        
+        <div class="search-input-group">
+            <i class="fas fa-search search-icon"></i>
+            <input type="text" id="site-search-input" placeholder="Type to search (e.g. Tracking, Freight)..." autocomplete="off">
+        </div>
 
+        <!-- Yahan Results aayenge -->
+        <div id="site-search-results" class="results-container"></div>
+    </div>
+</div>
     <script src="script.js"></script>
 </body>
 </html>

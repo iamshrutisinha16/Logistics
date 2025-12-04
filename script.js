@@ -201,3 +201,161 @@ function trackShipment() {
 
     }, 1500); 
 }
+
+/* Frieght forwading */
+document.addEventListener('DOMContentLoaded', () => {
+    
+    // --- 1. Background Slider Logic (Every 2 Seconds) ---
+    const slides = document.querySelectorAll('.logi-slide');
+    let currentSlide = 0;
+    const slideInterval = 2000; // 2 Seconds change time
+
+    function nextSlide() {
+        slides[currentSlide].classList.remove('active');
+        currentSlide = (currentSlide + 1) % slides.length;
+        slides[currentSlide].classList.add('active');
+    }
+
+    setInterval(nextSlide, slideInterval);
+
+
+    // --- 2. Scroll Animation Logic ---
+    const observerOptions = {
+        threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate-active');
+            }
+        });
+    }, observerOptions);
+
+    const animElements = document.querySelectorAll('.scroll-anim, .scroll-anim-left, .scroll-anim-right, .scroll-anim-up');
+    animElements.forEach(el => observer.observe(el));
+});
+
+/* contct us */
+document.addEventListener('DOMContentLoaded', () => {
+    
+    const form = document.getElementById('logisticsForm');
+    const successMsg = document.getElementById('successMessage');
+    const btn = document.querySelector('.contact-btn');
+    const btnText = btn.querySelector('span');
+    const btnIcon = btn.querySelector('i');
+
+    form.addEventListener('submit', (e) => {
+        e.preventDefault(); // Page reload rokne ke liye
+
+        // Button Animation - Loading state
+        btnText.innerText = "Sending...";
+        btnIcon.className = "fas fa-spinner fa-spin";
+        btn.style.opacity = "0.7";
+
+        // 2 Second wait simulate karna (fake server time)
+        setTimeout(() => {
+            // Form hide karna aur Success message dikhana
+            form.style.display = 'none';
+            successMsg.style.display = 'block';
+            
+            // Console m data dikhana (Testing ke liye)
+            console.log("Form Submitted Successfully!");
+            
+            // Agar wapas form lana ho 5 sec baad (Optional)
+            
+            setTimeout(() => {
+                form.reset();
+                form.style.display = 'block';
+                successMsg.style.display = 'none';
+                btnText.innerText = "Send Message";
+                btnIcon.className = "fas fa-paper-plane";
+                btn.style.opacity = "1";
+            }, 5000);
+            
+        }, 2000);
+    });
+
+    // Scroll Animation Logic (Jo pehle diya tha wahi same)
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = "1";
+                entry.target.style.transform = "translate(0,0)";
+            }
+        });
+    });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    
+    // --- 1. DATA: Aapke Website ke Pages ---
+    const pages = [
+        { title: "Home", url: "index.html", desc: "Main landing page, logistics services overview." },
+        { title: "About Us", url: "about.html", desc: "Company history, owner Kuldeep Singh, and vision." },
+        { title: "Freight Forwarding", url: "freight.html", desc: "Air and Ocean freight services globally." },
+        { title: "Track Shipment", url: "tracking.html", desc: "Check status of your courier or cargo." },
+        { title: "Contact Us", url: "contact.html", desc: "Phone numbers, email, and office locations." },
+        { title: "Services", url: "index.html#services", desc: "Full Truck Load, Part Load, and Warehousing." },
+        { title: "Register", url: "register.html", desc: "Create an account for faster booking." }
+    ];
+
+    // --- 2. ELEMENTS ---
+    const openBtn = document.querySelector('[data-key="search"]'); // Header Link
+    const overlay = document.getElementById('full-screen-search');
+    const closeBtn = document.getElementById('btn-close-search');
+    const input = document.getElementById('site-search-input');
+    const resultsDiv = document.getElementById('site-search-results');
+
+    // --- 3. OPEN/CLOSE LOGIC ---
+    if(openBtn) {
+        openBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            overlay.classList.add('active');
+            input.value = ''; // Reset input
+            resultsDiv.innerHTML = ''; // Reset results
+            setTimeout(() => input.focus(), 100); // Focus input automatically
+        });
+    }
+
+    // Close Functions
+    const closeSearch = () => overlay.classList.remove('active');
+    
+    if(closeBtn) closeBtn.addEventListener('click', closeSearch);
+    
+    // Escape Key to Close
+    document.addEventListener('keydown', (e) => {
+        if(e.key === 'Escape') closeSearch();
+    });
+
+    // --- 4. INTERNAL SEARCH LOGIC ---
+    input.addEventListener('input', function() {
+        const query = this.value.toLowerCase().trim();
+        resultsDiv.innerHTML = ''; // Clear previous
+
+        if(query.length === 0) return;
+
+        // Filter Logic
+        const matches = pages.filter(page => 
+            page.title.toLowerCase().includes(query) || 
+            page.desc.toLowerCase().includes(query)
+        );
+
+        // Display Results
+        if(matches.length > 0) {
+            matches.forEach(match => {
+                const item = document.createElement('a');
+                item.href = match.url;
+                item.className = 'search-result-item';
+                item.innerHTML = `
+                    <h4>${match.title}</h4>
+                    <p>${match.desc}</p>
+                `;
+                item.addEventListener('click', closeSearch); // Click karte hi popup band
+                resultsDiv.appendChild(item);
+            });
+        } else {
+            resultsDiv.innerHTML = `<p style="color: #666;">No results found for "${query}"</p>`;
+        }
+    });
+});
