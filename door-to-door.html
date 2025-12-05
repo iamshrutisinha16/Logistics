@@ -77,7 +77,7 @@
                     </a>
 
                     <ul class="dropdown-menu">
-                      <li><a href="door-to-door.html"  class="nav-item"  data-key="freight">Door To Door</a></li>
+                        <li><a href="door-to-door.html"  class="nav-item"  data-key="freight">Door To Door</a></li>
                         <li><a href="warehousing.html" class="nav-item" data-key="warehousing">Warehousing</a></li>
                         <li><a href="supply-chain.html" class="nav-item" data-key="supply_chain">Supply Chain</a></li>
                         <li><a href="expressdelivery.html"  class="nav-item" data-key="express">Express Delivery</a></li>
@@ -102,135 +102,133 @@
     </div>
 
 </header>
-
-<!-- TRACKING SECTION WRAPPER -->
-<div class="stl-track-wrapper">
-
-    <!-- 1. Tracking Hero Section (Map Background) -->
-    <div class="track-hero">
-        <div class="hero-overlay"></div>
-        <div class="hero-content scroll-animate">
-            <span class="status-badge"><i class="fas fa-satellite-dish"></i> Live Tracking</span>
-            <h1>Track Your Consignment</h1>
-            <p>Enter your LR (Lorry Receipt) or Docket Number to get real-time status.</p>
+<!-- DOOR TO DOOR HERO SECTION -->
+<section class="dd-hero">
+    <div class="dd-overlay"></div>
+    <div class="dd-hero-content" data-animate="fade-up">
+        <span class="hero-badge">FAST & SECURE</span>
+        <h1>Seamless <span class="highlight-text">Door-to-Door</span> Delivery</h1>
+        <p>We pick up from your doorstep and deliver to theirs. No hubs, no hassle, just pure speed.</p>
+        <div class="dd-btn-group">
+            <button class="btn-primary">Schedule Pickup</button>
+            <button class="btn-outline">Track Order</button>
         </div>
     </div>
+</section>
 
-    <!-- 2. Search Box Area -->
-    <div class="search-container scroll-animate">
-        <div class="search-box">
-            <input type="text" id="trackingInput" placeholder="Enter LR / Docket Number (e.g., STL-8854)" autocomplete="off">
-            <button id="trackBtn" onclick="trackShipment()">
-                <span id="btnText">Track Now</span>
-                <span id="btnLoader" class="loader" style="display:none;"></span>
-            </button>
+<!-- FEATURES / WHY CHOOSE US -->
+<section class="dd-features section-padding">
+    <div class="section-header" data-animate="fade-up">
+        <h2>Why Choose Our Delivery?</h2>
+        <p>Reliability meets speed with our premium logistics network.</p>
+    </div>
+    
+    <div class="dd-grid">
+        <!-- Card 1 -->
+        <div class="dd-card" data-animate="zoom-in">
+            <div class="icon-circle"><i class="fas fa-home"></i></div>
+            <h3>Free Pickup</h3>
+            <p>We collect parcels from your home or office location at zero extra cost.</p>
         </div>
-        <p class="helper-text">*Multiple queries can be separated by commas.</p>
+        <!-- Card 2 -->
+        <div class="dd-card" data-animate="zoom-in" style="transition-delay: 0.1s;">
+            <div class="icon-circle"><i class="fas fa-shield-alt"></i></div>
+            <h3>Insurance Cover</h3>
+            <p>Every shipment is insured against damage or loss during transit.</p>
+        </div>
+        <!-- Card 3 -->
+        <div class="dd-card" data-animate="zoom-in" style="transition-delay: 0.2s;">
+            <div class="icon-circle"><i class="fas fa-bolt"></i></div>
+            <h3>Express Options</h3>
+            <p>Same-day and Next-day delivery options available for urgent needs.</p>
+        </div>
+    </div>
+</section>
+
+<!-- DELIVERY PROCESS (ROADMAP) -->
+<section class="dd-process section-padding bg-light">
+    <div class="section-header">
+        <h2>The Journey</h2>
+        <p>How your package moves from Point A to Point B.</p>
     </div>
 
-    <!-- 3. Tracking Result Section (Hidden Initially) -->
-    <div id="trackingResult" class="result-section" style="display: none;">
-        <div class="result-card">
-            
-            <!-- Shipment Header -->
-            <div class="shipment-header">
-                <div class="shipment-id">
-                    <h4>Consignment No: <span id="displayID" style="color: var(--track-accent);">STL-8854</span></h4>
-                    <p>Booking Date: 28 Nov 2024</p>
-                </div>
-                <div class="shipment-status">
-                    <span class="status-tag in-transit">In Transit</span>
+    <div class="process-roadmap">
+        <div class="roadmap-line"></div> <!-- Connecting Line -->
+        
+        <div class="roadmap-step" data-animate="slide-left">
+            <div class="step-icon"><i class="fas fa-box"></i></div>
+            <h4>01. Booking</h4>
+            <p>You schedule a pickup online.</p>
+        </div>
+
+        <div class="roadmap-step" data-animate="fade-up">
+            <div class="step-icon"><i class="fas fa-truck-loading"></i></div>
+            <h4>02. Pickup</h4>
+            <p>Agent arrives at your door.</p>
+        </div>
+
+        <div class="roadmap-step" data-animate="fade-up">
+            <div class="step-icon"><i class="fas fa-plane-departure"></i></div>
+            <h4>03. Transit</h4>
+            <p>Fast movement via Air/Road.</p>
+        </div>
+
+        <div class="roadmap-step" data-animate="slide-right">
+            <div class="step-icon"><i class="fas fa-smile-beam"></i></div>
+            <h4>04. Delivery</h4>
+            <p>Safe handover to receiver.</p>
+        </div>
+    </div>
+</section>
+
+<!-- LIVE TRACKING TECH SECTION (Dark Blue) -->
+<section class="dd-tech">
+    <div class="tech-bg-overlay"></div>
+    <div class="dd-tech-container">
+        <!-- Left Text -->
+        <div class="tech-text" data-animate="slide-left">
+            <h2>Real-Time <span class="text-gradient">GPS Tracking</span></h2>
+            <p>Never wonder "Where is my parcel?". Our app gives you live updates, driver details, and estimated time of arrival.</p>
+            <ul class="tech-list">
+                <li><i class="fas fa-check"></i> SMS & WhatsApp Updates</li>
+                <li><i class="fas fa-check"></i> Live Map View</li>
+                <li><i class="fas fa-check"></i> Digital Proof of Delivery (e-POD)</li>
+            </ul>
+        </div>
+
+        <!-- Right Visual (Mobile Animation) -->
+        <div class="tech-mobile-visual" data-animate="zoom-in">
+            <div class="phone-mockup">
+                <div class="screen">
+                    <div class="map-route"></div>
+                    <div class="driver-pin"><i class="fas fa-truck"></i></div>
+                    <div class="delivery-status">
+                        <span>Arriving in 15 mins</span>
+                    </div>
                 </div>
             </div>
-
-            <!-- Route Info -->
-            <div class="route-info">
-                <div class="point">
-                    <p class="label">Origin</p>
-                    <h3>Pune (H.O)</h3>
-                </div>
-                <div class="arrow">
-                    <i class="fas fa-truck-moving"></i>
-                    <div class="dotted-line"></div>
-                </div>
-                <div class="point">
-                    <p class="label">Destination</p>
-                    <h3>Delhi (Hub)</h3>
-                </div>
-            </div>
-
-            <!-- Vertical Timeline -->
-            <div class="timeline-wrapper">
-                <h3>Shipment History</h3>
-                <ul class="timeline">
-                    <!-- Step 1: Completed -->
-                    <li class="event completed">
-                        <div class="dot"></div>
-                        <div class="content">
-                            <h5>Shipment Booked</h5>
-                            <p class="date">28 Nov, 10:30 AM - Nigdi, Pune</p>
-                        </div>
-                    </li>
-                    <!-- Step 2: Completed -->
-                    <li class="event completed">
-                        <div class="dot"></div>
-                        <div class="content">
-                            <h5>Loaded on Truck (MH-12-FC-5590)</h5>
-                            <p class="date">28 Nov, 06:00 PM - Moshi Godown</p>
-                        </div>
-                    </li>
-                    <!-- Step 3: Completed -->
-                    <li class="event completed">
-                        <div class="dot"></div>
-                        <div class="content">
-                            <h5>Departed from Pune Hub</h5>
-                            <p class="date">28 Nov, 09:15 PM</p>
-                        </div>
-                    </li>
-                    <!-- Step 4: Active (Current) -->
-                    <li class="event active">
-                        <div class="dot pulse"></div>
-                        <div class="content">
-                            <h5>In Transit (Near Jaipur)</h5>
-                            <p class="date">Today, 02:30 PM - On Highway</p>
-                            <span class="current-msg">Expected Delivery: Tomorrow by 4 PM</span>
-                        </div>
-                    </li>
-                    <!-- Step 5: Pending -->
-                    <li class="event pending">
-                        <div class="dot"></div>
-                        <div class="content">
-                            <h5>Out for Delivery</h5>
-                            <p class="date">Pending</p>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-
+            <!-- Glow Effect -->
+            <div class="mobile-glow"></div>
         </div>
     </div>
 
-    <!-- 4. Features / Info Section -->
-    <div class="track-info-grid">
-        <div class="info-box scroll-animate">
-            <i class="fas fa-sms"></i>
-            <h4>SMS Updates</h4>
-            <p>Get automatic updates on your registered mobile number.</p>
-        </div>
-        <div class="info-box scroll-animate">
-            <i class="fas fa-headset"></i>
-            <h4>24/7 Support</h4>
-            <p>Call <a href="tel:9822526530">9822526530</a> for manual tracking help.</p>
-        </div>
-        <div class="info-box scroll-animate">
-            <i class="fas fa-lock"></i>
-            <h4>Secure Cargo</h4>
-            <p>GPS enabled trucks for real-time location monitoring.</p>
-        </div>
+    <!-- WAVE DIVIDER (Taaki Footer se chipke nahi) -->
+    <div class="custom-shape-divider-bottom">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+        </svg>
     </div>
+</section>
 
-</div>
-   <!-- FOOTER SECTION START -->
+<!-- FINAL CTA -->
+<section class="dd-cta">
+    <div class="cta-content" data-animate="fade-up">
+        <h2>Ready to Ship?</h2>
+        <p>Experience the fastest door-to-door service in the country.</p>
+        <button class="btn-glow">Book Now</button>
+    </div>
+</section>
+  <!-- FOOTER SECTION START -->
 <footer class="stl-footer">
     <div class="footer-container">
         

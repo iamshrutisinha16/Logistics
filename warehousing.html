@@ -77,7 +77,7 @@
                     </a>
 
                     <ul class="dropdown-menu">
-                      <li><a href="door-to-door.html"  class="nav-item"  data-key="freight">Door To Door</a></li>
+                        <li><a href="door-to-door.html"  class="nav-item"  data-key="freight">Door To Door</a></li>
                         <li><a href="warehousing.html" class="nav-item" data-key="warehousing">Warehousing</a></li>
                         <li><a href="supply-chain.html" class="nav-item" data-key="supply_chain">Supply Chain</a></li>
                         <li><a href="expressdelivery.html"  class="nav-item" data-key="express">Express Delivery</a></li>
@@ -102,135 +102,119 @@
     </div>
 
 </header>
-
-<!-- TRACKING SECTION WRAPPER -->
-<div class="stl-track-wrapper">
-
-    <!-- 1. Tracking Hero Section (Map Background) -->
-    <div class="track-hero">
-        <div class="hero-overlay"></div>
-        <div class="hero-content scroll-animate">
-            <span class="status-badge"><i class="fas fa-satellite-dish"></i> Live Tracking</span>
-            <h1>Track Your Consignment</h1>
-            <p>Enter your LR (Lorry Receipt) or Docket Number to get real-time status.</p>
-        </div>
-    </div>
-
-    <!-- 2. Search Box Area -->
-    <div class="search-container scroll-animate">
-        <div class="search-box">
-            <input type="text" id="trackingInput" placeholder="Enter LR / Docket Number (e.g., STL-8854)" autocomplete="off">
-            <button id="trackBtn" onclick="trackShipment()">
-                <span id="btnText">Track Now</span>
-                <span id="btnLoader" class="loader" style="display:none;"></span>
-            </button>
-        </div>
-        <p class="helper-text">*Multiple queries can be separated by commas.</p>
-    </div>
-
-    <!-- 3. Tracking Result Section (Hidden Initially) -->
-    <div id="trackingResult" class="result-section" style="display: none;">
-        <div class="result-card">
-            
-            <!-- Shipment Header -->
-            <div class="shipment-header">
-                <div class="shipment-id">
-                    <h4>Consignment No: <span id="displayID" style="color: var(--track-accent);">STL-8854</span></h4>
-                    <p>Booking Date: 28 Nov 2024</p>
-                </div>
-                <div class="shipment-status">
-                    <span class="status-tag in-transit">In Transit</span>
-                </div>
+<!-- Warehousing Section Start -->
+<main class="warehouse-container">
+    
+    <!-- Hero Section -->
+    <section class="wh-hero">
+        <div class="wh-overlay"></div>
+        <div class="wh-content" data-animate="fade-up">
+            <h1>Smart Warehousing Solutions</h1>
+            <p>Secure, Scalable, and Technology-Driven Storage for Your Business.</p>
+            <div class="wh-buttons">
+                <button class="btn-primary">Get a Quote</button>
+                <button class="btn-secondary">Explore Facilities</button>
             </div>
+        </div>
+    </section>
 
-            <!-- Route Info -->
-            <div class="route-info">
-                <div class="point">
-                    <p class="label">Origin</p>
-                    <h3>Pune (H.O)</h3>
+    <!-- Key Features Section -->
+    <section class="wh-features section-padding">
+        <div class="section-header" data-animate="fade-up">
+            <h2>Our Warehousing Capabilities</h2>
+            <p>Optimized logistics to streamline your supply chain.</p>
+        </div>
+        <div class="features-grid">
+            <!-- Card 1 -->
+            <div class="feature-card" data-animate="slide-left">
+                <div class="icon-box">
+                    <i class="fas fa-box-open"></i> <!-- FontAwesome Icon required -->
                 </div>
-                <div class="arrow">
-                    <i class="fas fa-truck-moving"></i>
-                    <div class="dotted-line"></div>
-                </div>
-                <div class="point">
-                    <p class="label">Destination</p>
-                    <h3>Delhi (Hub)</h3>
-                </div>
+                <h3>Inventory Management</h3>
+                <p>Real-time tracking and automated stock levels using advanced WMS software.</p>
             </div>
-
-            <!-- Vertical Timeline -->
-            <div class="timeline-wrapper">
-                <h3>Shipment History</h3>
-                <ul class="timeline">
-                    <!-- Step 1: Completed -->
-                    <li class="event completed">
-                        <div class="dot"></div>
-                        <div class="content">
-                            <h5>Shipment Booked</h5>
-                            <p class="date">28 Nov, 10:30 AM - Nigdi, Pune</p>
-                        </div>
-                    </li>
-                    <!-- Step 2: Completed -->
-                    <li class="event completed">
-                        <div class="dot"></div>
-                        <div class="content">
-                            <h5>Loaded on Truck (MH-12-FC-5590)</h5>
-                            <p class="date">28 Nov, 06:00 PM - Moshi Godown</p>
-                        </div>
-                    </li>
-                    <!-- Step 3: Completed -->
-                    <li class="event completed">
-                        <div class="dot"></div>
-                        <div class="content">
-                            <h5>Departed from Pune Hub</h5>
-                            <p class="date">28 Nov, 09:15 PM</p>
-                        </div>
-                    </li>
-                    <!-- Step 4: Active (Current) -->
-                    <li class="event active">
-                        <div class="dot pulse"></div>
-                        <div class="content">
-                            <h5>In Transit (Near Jaipur)</h5>
-                            <p class="date">Today, 02:30 PM - On Highway</p>
-                            <span class="current-msg">Expected Delivery: Tomorrow by 4 PM</span>
-                        </div>
-                    </li>
-                    <!-- Step 5: Pending -->
-                    <li class="event pending">
-                        <div class="dot"></div>
-                        <div class="content">
-                            <h5>Out for Delivery</h5>
-                            <p class="date">Pending</p>
-                        </div>
-                    </li>
-                </ul>
+            <!-- Card 2 -->
+            <div class="feature-card" data-animate="fade-up">
+                <div class="icon-box">
+                    <i class="fas fa-temperature-low"></i>
+                </div>
+                <h3>Climate Control</h3>
+                <p>Temperature-controlled units for perishable goods, pharmaceuticals, and sensitive items.</p>
             </div>
+            <!-- Card 3 -->
+            <div class="feature-card" data-animate="slide-right">
+                <div class="icon-box">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <h3>24/7 Security</h3>
+                <p>Round-the-clock CCTV surveillance, biometric access, and fire safety systems.</p>
+            </div>
+        </div>
+    </section>
 
+    <!-- Working Process (Timeline) -->
+    <section class="wh-process section-padding bg-light">
+        <div class="section-header" data-animate="fade-up">
+            <h2>How It Works</h2>
+            <p>From receiving to dispatch, we handle it all.</p>
         </div>
-    </div>
+        <div class="process-timeline">
+            <div class="step" data-animate="zoom-in" style="transition-delay: 0.1s;">
+                <div class="step-number">01</div>
+                <h4>Receiving</h4>
+                <p>Goods inspection and quality check upon arrival.</p>
+            </div>
+            <div class="step" data-animate="zoom-in" style="transition-delay: 0.3s;">
+                <div class="step-number">02</div>
+                <h4>Storage</h4>
+                <p>Organized placement in designated zones.</p>
+            </div>
+            <div class="step" data-animate="zoom-in" style="transition-delay: 0.5s;">
+                <div class="step-number">03</div>
+                <h4>Picking & Packing</h4>
+                <p>Automated retrieval and secure packaging.</p>
+            </div>
+            <div class="step" data-animate="zoom-in" style="transition-delay: 0.7s;">
+                <div class="step-number">04</div>
+                <h4>Dispatch</h4>
+                <p>Fast shipping via our logistics network.</p>
+            </div>
+        </div>
+    </section>
 
-    <!-- 4. Features / Info Section -->
-    <div class="track-info-grid">
-        <div class="info-box scroll-animate">
-            <i class="fas fa-sms"></i>
-            <h4>SMS Updates</h4>
-            <p>Get automatic updates on your registered mobile number.</p>
+    <!-- Stats Section (Counter Animation) -->
+    <section class="wh-stats">
+        <div class="stat-overlay"></div>
+        <div class="stats-container">
+            <div class="stat-item">
+                <h2 class="counter" data-target="50000">0</h2>
+                <span>+</span>
+                <p>Sq. Ft Area</p>
+            </div>
+            <div class="stat-item">
+                <h2 class="counter" data-target="120">0</h2>
+                <span>+</span>
+                <p>Global Clients</p>
+            </div>
+            <div class="stat-item">
+                <h2 class="counter" data-target="99">0</h2>
+                <span>%</span>
+                <p>Accuracy Rate</p>
+            </div>
         </div>
-        <div class="info-box scroll-animate">
-            <i class="fas fa-headset"></i>
-            <h4>24/7 Support</h4>
-            <p>Call <a href="tel:9822526530">9822526530</a> for manual tracking help.</p>
-        </div>
-        <div class="info-box scroll-animate">
-            <i class="fas fa-lock"></i>
-            <h4>Secure Cargo</h4>
-            <p>GPS enabled trucks for real-time location monitoring.</p>
-        </div>
-    </div>
+    </section>
 
-</div>
-   <!-- FOOTER SECTION START -->
+    <!-- CTA Section -->
+    <section class="wh-cta section-padding">
+        <div class="cta-box" data-animate="fade-up">
+            <h2>Ready to Optimize Your Storage?</h2>
+            <p>Contact us today for a customized warehousing plan.</p>
+            <button class="btn-primary">Contact Support</button>
+        </div>
+    </section>
+
+</main>
+  <!-- FOOTER SECTION START -->
 <footer class="stl-footer">
     <div class="footer-container">
         

@@ -77,11 +77,12 @@
                     </a>
 
                     <ul class="dropdown-menu">
-                        <li><a href="freight.html"  class="nav-item"  data-key="freight">Freight Forwarding</a></li>
-                        <li><a href="#warehousing" data-key="warehousing">Warehousing</a></li>
-                        <li><a href="#supply-chain" data-key="supply_chain">Supply Chain</a></li>
-                        <li><a href="#express" data-key="express">Express Delivery</a></li>
-                        <li><a href="#international" data-key="international">International Shipping</a></li>
+                       <li><a href="door-to-door.html"  class="nav-item"  data-key="freight">Door To Door</a></li>
+                        <li><a href="warehousing.html" class="nav-item" data-key="warehousing">Warehousing</a></li>
+                        <li><a href="supply-chain.html" class="nav-item" data-key="supply_chain">Supply Chain</a></li>
+                        <li><a href="expressdelivery.html"  class="nav-item" data-key="express">Express Delivery</a></li>
+                        <li><a href="full-truck-load.html" class="nav-item" data-key="full_truck">Full Truck Load</a></li>
+                        <li><a href="part-load.html"  class="nav-item" data-key="part_load">Part Load</a></li>
                     </ul>
                 </li>
 
@@ -223,17 +224,17 @@
         loading="lazy">
     </iframe>
 </section>
-  <!-- FOOTER SECTION START -->
+    <!-- FOOTER SECTION START -->
 <footer class="stl-footer">
     <div class="footer-container">
         
         <!-- Column 1: Company Info -->
-        <div class="footer-col">
+        <div class="footer-col about-col">
             <div class="footer-logo">
                 <h2>STL <span>Logistics</span></h2>
             </div>
             <p class="company-desc">
-                Sumit Trans Logistics is your trusted partner for Full Truck Load & Part Load services across India. delivering trust since 2010.
+                Your trusted partner for Full Truck Load & Part Load services across India. Delivering trust and speed since 2010.
             </p>
             <div class="social-links">
                 <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -244,60 +245,55 @@
         </div>
 
         <!-- Column 2: Quick Links -->
-        <div class="footer-col">
+        <div class="footer-col links-col">
             <h3>Quick Links</h3>
             <ul class="footer-links">
-                <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
-                <li><a href="about.html"><i class="fas fa-chevron-right"></i> About Us</a></li>
-                <li><a href="tracking.html"><i class="fas fa-chevron-right"></i> Track Shipment</a></li>
-                <li><a href="#services"><i class="fas fa-chevron-right"></i> Our Services</a></li>
-                <li><a href="#contact"><i class="fas fa-chevron-right"></i> Contact Us</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="tracking.html">Track Shipment</a></li>
+                <li><a href="contact.html">Contact Support</a></li>
             </ul>
         </div>
 
-        <!-- Column 3: Contact Info (Your Details) -->
-        <div class="footer-col">
+        <!-- Column 3: Contact Info (Wide Column) -->
+        <div class="footer-col contact-col">
             <h3>Get In Touch</h3>
             <ul class="contact-info">
-
-                 
                 <!-- Phone -->
                 <li>
-                    <i class="fas fa-phone-alt icon"></i>
+                    <div class="icon-box"><i class="fas fa-phone-alt"></i></div>
                     <div class="text">
-                        <strong>Phone:</strong>
-                        <p><a href="tel:9306503035">+91 93065 03035</a></p>
+                        <span>Call Us:</span>
+                        <a href="tel:9306503035">+91 93065 03035</a>
                     </div>
                 </li>
                  <!-- Email -->
                 <li>
-                    <i class="fas fa-envelope icon"></i>
+                    <div class="icon-box"><i class="fas fa-envelope"></i></div>
                     <div class="text">
-                        <strong>Email:</strong>
-                        <p><a href="mailto:Sumittranslogistics580@gmail.com">Sumittranslogistics580@gmail.com</a></p>
+                        <span>Email Us:</span>
+                        <!-- Word break lagayenge taaki ye overlap na ho -->
+                        <a href="mailto:Sumittranslogistics580@gmail.com" class="email-link">Sumittranslogistics580@gmail.com</a>
                     </div>
                 </li>
                 <!-- Address -->
                 <li>
-                    <i class="fas fa-map-marker-alt icon"></i>
+                    <div class="icon-box"><i class="fas fa-map-marker-alt"></i></div>
                     <div class="text">
-                        <strong>Head Office:</strong>
-                        <p>
-                            Shop No. 5, Nihal Singh Market,<br>
-                            Near Om Dharam Kanta, Tpt Nagar,<br>
-                            Faridabad.
-                        </p>
+                        <span>Head Office:</span>
+                        <p>Shop No. 5, Nihal Singh Market, Near Om Dharam Kanta, Tpt Nagar, Faridabad.</p>
                     </div>
                 </li>
             </ul>
         </div>
 
         <!-- Column 4: Newsletter -->
-        <div class="footer-col">
+        <div class="footer-col newsletter-col">
             <h3>Newsletter</h3>
-            <p style="margin-bottom: 15px;">Subscribe to get latest updates and offers.</p>
+            <p>Subscribe for latest logistics updates.</p>
             <form class="newsletter-form">
-                <input type="email" placeholder="Enter your email">
+                <input type="email" placeholder="Your Email Address" required>
                 <button type="submit"><i class="fas fa-paper-plane"></i></button>
             </form>
         </div>
@@ -309,9 +305,14 @@
         <p>&copy; 2025 <strong>Sumit Trans Logistics</strong>. All Rights Reserved.</p>
         <div class="bottom-links">
             <a href="#">Privacy Policy</a>
-            <a href="#">Terms of Service</a>
+            <a href="#">Terms & Conditions</a>
         </div>
     </div>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" title="Go to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 </footer>
 <!-- PROFESSIONAL FULL SCREEN SEARCH OVERLAY -->
 <div id="full-screen-search" class="search-overlay">
@@ -331,4 +332,3 @@
 </div>
     <script src="script.js"></script>
 </body>
-</html>

@@ -202,40 +202,6 @@ function trackShipment() {
     }, 1500); 
 }
 
-/* Frieght forwading */
-document.addEventListener('DOMContentLoaded', () => {
-    
-    // --- 1. Background Slider Logic (Every 2 Seconds) ---
-    const slides = document.querySelectorAll('.logi-slide');
-    let currentSlide = 0;
-    const slideInterval = 2000; // 2 Seconds change time
-
-    function nextSlide() {
-        slides[currentSlide].classList.remove('active');
-        currentSlide = (currentSlide + 1) % slides.length;
-        slides[currentSlide].classList.add('active');
-    }
-
-    setInterval(nextSlide, slideInterval);
-
-
-    // --- 2. Scroll Animation Logic ---
-    const observerOptions = {
-        threshold: 0.1
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('animate-active');
-            }
-        });
-    }, observerOptions);
-
-    const animElements = document.querySelectorAll('.scroll-anim, .scroll-anim-left, .scroll-anim-right, .scroll-anim-up');
-    animElements.forEach(el => observer.observe(el));
-});
-
 /* contct us */
 document.addEventListener('DOMContentLoaded', () => {
     
@@ -358,4 +324,145 @@ document.addEventListener('DOMContentLoaded', () => {
             resultsDiv.innerHTML = `<p style="color: #666;">No results found for "${query}"</p>`;
         }
     });
+});
+
+/*Warehousing*/
+document.addEventListener('DOMContentLoaded', () => {
+    
+    // --- 1. Scroll Animations (Intersection Observer) ---
+    const animatedElements = document.querySelectorAll('[data-animate]');
+
+    const observerOptions = {
+        threshold: 0.1 // Element 10% dikhne par animation trigger hoga
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target); // Animation sirf ek baar chalegi
+            }
+        });
+    }, observerOptions);
+
+    animatedElements.forEach(el => {
+        observer.observe(el);
+    });
+
+
+    // --- 2. Stats Number Counter Animation ---
+    const counters = document.querySelectorAll('.counter');
+    const speed = 200; // Jitna kam number, utna fast
+
+    const counterObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const counter = entry.target;
+                
+                const updateCount = () => {
+                    const target = +counter.getAttribute('data-target');
+                    const count = +counter.innerText;
+                    
+                    // Lower increment = slower animation
+                    const inc = target / speed;
+
+                    if (count < target) {
+                        counter.innerText = Math.ceil(count + inc);
+                        setTimeout(updateCount, 20);
+                    } else {
+                        counter.innerText = target;
+                    }
+                };
+                updateCount();
+                observer.unobserve(counter);
+            }
+        });
+    }, { threshold: 0.5 });
+
+    counters.forEach(counter => {
+        counterObserver.observe(counter);
+    });
+
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    
+    const modal = document.getElementById('consultModal');
+    const openBtn = document.getElementById('consultBtn');
+    const closeBtns = document.querySelectorAll('.close-btn, .btn-close-modal'); // X aur Close button dono
+    const form = document.getElementById('consultForm');
+    const formContainer = document.querySelector('.form-container');
+    const successMsg = document.querySelector('.success-message');
+    const submitBtn = document.querySelector('.btn-submit');
+
+    // 1. Open Modal
+    if(openBtn) {
+        openBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            // Reset to form view every time we open
+            formContainer.style.display = 'block';
+            successMsg.style.display = 'none';
+            form.reset();
+            modal.classList.add('active');
+        });
+    }
+
+    // 2. Close Modal Logic
+    const closeModal = () => {
+        modal.classList.remove('active');
+    };
+
+    closeBtns.forEach(btn => btn.addEventListener('click', closeModal));
+
+    window.addEventListener('click', (e) => {
+        if (e.target == modal) closeModal();
+    });
+
+    // 3. Handle Form Submit (Switch to Success View)
+    if(form) {
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Loading Effect
+            const originalText = submitBtn.innerText;
+            submitBtn.innerText = "Processing...";
+            submitBtn.style.opacity = "0.7";
+
+            // 1.5 Second fake delay
+            setTimeout(() => {
+                // Hide Form
+                formContainer.style.display = 'none';
+                // Show Success Message
+                successMsg.style.display = 'block';
+                
+                // Reset Button
+                submitBtn.innerText = originalText;
+                submitBtn.style.opacity = "1";
+            }, 1500);
+        });
+    }
+});
+   document.addEventListener('DOMContentLoaded', () => {
+
+    // --- Back to Top Button Logic ---
+    const backToTopBtn = document.getElementById('backToTop');
+
+    // 1. Show Button on Scroll
+    window.addEventListener('scroll', () => {
+        // Agar user 300px se zyada niche scroll karega tab button dikhega
+        if (window.scrollY > 300) {
+            backToTopBtn.classList.add('show');
+        } else {
+            backToTopBtn.classList.remove('show');
+        }
+    });
+
+    // 2. Smooth Scroll to Top on Click
+    backToTopBtn.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth' // Smooth animation
+        });
+    });
+
 });
