@@ -1,0 +1,386 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sumit Trans Logistics | Full Truck & Part Load</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="maersk-header">
+    <div class="header-top">
+        <div class="container top-container">
+
+            <!-- Logo -->
+            <a href="index.html" class="logo-area">
+                <div class="logo-box">
+                    <img src="assets/logo.jpeg" alt="STL Logo" class="my-logo-img">
+                    <div class="text-group">
+                        <span class="logo-main">STL</span>
+                        <span class="logo-sub">Logistics</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Right Side Utility Icons -->
+            <div class="utility-icons">
+
+                <!-- Language Dropdown -->
+                <div class="language-dropdown">
+                    <a href="#" class="util-link lang-toggle">
+                        <i class="fas fa-globe"></i> EN
+                    </a>
+
+                    <div class="lang-menu">
+                        <a href="#" data-lang="en">English (EN)</a>
+                        <a href="#" data-lang="hi">Hindi (HI)</a>
+                        <a href="#" data-lang="mr">Marathi (MR)</a>
+                    </div>
+                </div>
+
+                <a href="#" class="util-link" data-key="search"><i class="fas fa-search"></i> Search</a>
+                <a href="#" class="util-link" data-key="notifications"><i class="fas fa-bell"></i> Notifications</a>
+                <a href="#" class="util-link" data-key="support"><i class="fas fa-question-circle"></i> Support</a>
+                <a href="contact.html" class="util-link" data-key="contact"><i class="far fa-comment-alt"></i> Contact Us</a>
+
+                <!-- Mobile Hamburger -->
+                <div class="hamburger" id="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Bottom Navigation -->
+    <div class="header-bottom">
+        <div class="container bottom-container">
+
+            <!-- Main Navigation -->
+            <ul class="main-nav" id="main-nav-links">
+
+                <li><a href="index.html" class="nav-item" data-key="home">Home</a></li>
+                <li><a href="about.html" class="nav-item" data-key="about">About</a></li>
+
+                <!-- Services Dropdown -->
+                <li class="dropdown-item">
+                    <a href="services.html" class="nav-item" data-key="services">Services 
+                        <i class="fas fa-angle-down"></i>
+                    </a>
+
+                    <ul class="dropdown-menu">
+                        <li><a href="door-to-door.html"  class="nav-item"  data-key="door-to-door">Door To Door</a></li>
+                        <li><a href="warehousing.html" class="nav-item" data-key="warehousing">Warehousing</a></li>
+                        <li><a href="supply-chain.html" class="nav-item" data-key="supply_chain">Supply Chain</a></li>
+                        <li><a href="expressdelivery.html"  class="nav-item" data-key="express">Express Delivery</a></li>
+                        <li><a href="full-truck-load.html" class="nav-item" data-key="full_truck">Full Truck Load</a></li>
+                        <li><a href="part-load.html"  class="nav-item" data-key="part_load">Part Load</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="tracking.html" class="nav-item" data-key="track">Track Shipment</a></li>
+                <li><a href="#locations" class="nav-item" data-key="locations">Locations</a></li>
+            </ul>
+
+            <!-- Auth Buttons -->
+            <div class="auth-buttons">
+                <a href="#" class="btn-register" data-key="register">
+                    <i class="far fa-user"></i> Register
+                </a>
+                <a href="#" class="btn-login" data-key="login">Login</a>
+            </div>
+
+        </div>
+    </div>
+</header>
+
+    <!-- SERVICES SECTION START -->
+    <section class="services-section" id="services">
+        <div class="container">
+            <div class="section-header">
+                <span class="sub-title">What We Do</span>
+                <h2 class="title">Our Specialized Logistics Services</h2>
+                <p class="description">We provide end-to-end logistics solutions tailored to your business needs, ensuring speed, safety, and reliability.</p>
+            </div>
+
+            <div class="services-grid">
+                
+                <!-- Service 1: Door to Door -->
+                <div class="service-card hidden">
+                    <div class="icon-box">
+                        <i class="fa-solid fa-house-chimney-user"></i>
+                    </div>
+                    <h3>Door-to-Door Delivery</h3>
+                    <p>Complete pickup and delivery solution from your doorstep to the destination with real-time tracking.</p>
+                    <button class="read-more-btn" data-target="modal-1">Read Details <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+
+                <!-- Service 2: Warehousing -->
+                <div class="service-card hidden">
+                    <div class="icon-box">
+                        <i class="fa-solid fa-warehouse"></i>
+                    </div>
+                    <h3>Warehousing Solutions</h3>
+                    <p>Secure, climate-controlled storage facilities with advanced inventory management systems.</p>
+                    <button class="read-more-btn" data-target="modal-2">Read Details <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+
+                <!-- Service 3: Supply Chain -->
+                <div class="service-card hidden">
+                    <div class="icon-box">
+                        <i class="fa-solid fa-network-wired"></i>
+                    </div>
+                    <h3>Supply Chain Management</h3>
+                    <p>Optimizing your flow of goods to reduce costs and improve efficiency from procurement to delivery.</p>
+                    <button class="read-more-btn" data-target="modal-3">Read Details <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+
+                <!-- Service 4: Express Delivery -->
+                <div class="service-card hidden">
+                    <div class="icon-box">
+                        <i class="fa-solid fa-plane-departure"></i>
+                    </div>
+                    <h3>Express Delivery</h3>
+                    <p>Time-critical shipping solutions for urgent parcels ensuring the fastest turnaround time.</p>
+                    <button class="read-more-btn" data-target="modal-4">Read Details <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+
+                <!-- Service 5: Full Truck Load -->
+                <div class="service-card hidden">
+                    <div class="icon-box">
+                        <i class="fa-solid fa-truck-moving"></i>
+                    </div>
+                    <h3>Full Truck Load (FTL)</h3>
+                    <p>Exclusive truck booking for large shipments, offering direct transit and maximum security.</p>
+                    <button class="read-more-btn" data-target="modal-5">Read Details <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+
+                <!-- Service 6: Part Load -->
+                <div class="service-card hidden">
+                    <div class="icon-box">
+                        <i class="fa-solid fa-boxes-packing"></i>
+                    </div>
+                    <h3>Part Load / LTL</h3>
+                    <p>Cost-effective solutions for smaller shipments by sharing truck space without compromising safety.</p>
+                    <button class="read-more-btn" data-target="modal-6">Read Details <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- MODALS (Hidden Content for "Pura Detail") -->
+    <div class="modal-overlay" id="modal-overlay"></div>
+
+    <!-- Modal 1 -->
+    <div class="service-modal" id="modal-1">
+        <div class="modal-header">
+            <h3>Door-to-Door Delivery</h3>
+            <button class="close-modal">&times;</button>
+        </div>
+        <div class="modal-body">
+            <p><strong>Our Door-to-Door service is the epitome of convenience for our clients.</strong> We handle the entire logistics process, eliminating the need for you to arrange transport to or from terminals.</p>
+            <ul>
+                <li><strong>Pickup:</strong> We collect goods directly from your factory, warehouse, or home.</li>
+                <li><strong>Documentation:</strong> We handle all waybills, insurance, and compliance paperwork.</li>
+                <li><strong>Customs Clearance:</strong> For international shipments, we manage all customs formalities.</li>
+                <li><strong>Final Delivery:</strong> Goods are delivered safely to the receiver's specific location.</li>
+            </ul>
+            <p>This service is ideal for e-commerce businesses and individuals looking for a hassle-free shipping experience.</p>
+        </div>
+    </div>
+
+    <!-- Modal 2 -->
+    <div class="service-modal" id="modal-2">
+        <div class="modal-header">
+            <h3>Warehousing Solutions</h3>
+            <button class="close-modal">&times;</button>
+        </div>
+        <div class="modal-body">
+            <p><strong>State-of-the-art storage for your valuable inventory.</strong> Our warehouses are strategically located to ensure quick distribution.</p>
+            <ul>
+                <li><strong>Inventory Management:</strong> Advanced WMS (Warehouse Management Software) to track stock levels in real-time.</li>
+                <li><strong>Security:</strong> 24/7 CCTV surveillance, fire safety systems, and guarded access.</li>
+                <li><strong>Value Added Services:</strong> Packaging, labeling, kitting, and bundling services available onsite.</li>
+                <li><strong>Scalability:</strong> Flexible storage space that grows with your business needs during peak seasons.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Modal 3 -->
+    <div class="service-modal" id="modal-3">
+        <div class="modal-header">
+            <h3>Supply Chain Management</h3>
+            <button class="close-modal">&times;</button>
+        </div>
+        <div class="modal-body">
+            <p><strong>We don't just move goods; we optimize your business.</strong> Our SCM experts analyze your current logistics flow to identify bottlenecks and cost-saving opportunities.</p>
+            <ul>
+                <li><strong>Planning & Strategy:</strong> Demand forecasting and route optimization.</li>
+                <li><strong>Sourcing:</strong> Assistance with procurement logistics.</li>
+                <li><strong>Visibility:</strong> End-to-end visibility of the supply chain through our digital dashboard.</li>
+                <li><strong>Sustainability:</strong> Green logistics solutions to reduce carbon footprint.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Modal 4 -->
+    <div class="service-modal" id="modal-4">
+        <div class="modal-header">
+            <h3>Express Delivery</h3>
+            <button class="close-modal">&times;</button>
+        </div>
+        <div class="modal-body">
+            <p><strong>When time is money, choose Express.</strong> Designed for high-priority shipments that need to reach their destination yesterday.</p>
+            <ul>
+                <li><strong>Next-Day Delivery:</strong> Available for select domestic locations.</li>
+                <li><strong>Priority Handling:</strong> Your shipment skips the queue at sorting centers.</li>
+                <li><strong>Air Freight Integration:</strong> Leveraging air cargo for long-distance rapid transit.</li>
+                <li><strong>Live Monitoring:</strong> Dedicated support team monitoring your parcel until delivery.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Modal 5 -->
+    <div class="service-modal" id="modal-5">
+        <div class="modal-header">
+            <h3>Full Truck Load (FTL)</h3>
+            <button class="close-modal">&times;</button>
+        </div>
+        <div class="modal-body">
+            <p><strong>Dedicated capacity for your bulk shipments.</strong> FTL is the best choice when you have enough goods to fill a truck, or when you want a dedicated vehicle for security.</p>
+            <ul>
+                <li><strong>Faster Transit:</strong> The truck goes directly from Point A to Point B with no stopovers for other pickups.</li>
+                <li><strong>Reduced Damage Risk:</strong> No handling of goods at transshipment hubs.</li>
+                <li><strong>Vehicle Variety:</strong> From 14ft to 32ft containers and open trailers.</li>
+                <li><strong>GPS Tracking:</strong> Track the vehicle location in real-time.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Modal 6 -->
+    <div class="service-modal" id="modal-6">
+        <div class="modal-header">
+            <h3>Part Load / LTL</h3>
+            <button class="close-modal">&times;</button>
+        </div>
+        <div class="modal-body">
+            <p><strong>Economic shipping for smaller loads.</strong> You don't need to hire a full truck if you don't have enough goods. Pay only for the space you use.</p>
+            <ul>
+                <li><strong>Cost Efficiency:</strong> Split the transportation cost with other shippers.</li>
+                <li><strong>Regular Connectivity:</strong> Daily services to major cities across the country.</li>
+                <li><strong>Consolidation:</strong> We professionally consolidate loads to ensure maximum safety.</li>
+                <li><strong>Small & Medium Business:</strong> Perfect for SMEs requiring frequent, smaller shipments.</li>
+            </ul>
+        </div>
+    </div>
+
+  <!-- FOOTER SECTION START -->
+<footer class="stl-footer">
+    <div class="footer-container">
+        <div class="footer-col about-col">
+            <div class="footer-logo">
+                <h2>STL <span>Logistics</span></h2>
+            </div>
+            <p class="company-desc">
+                Your trusted partner for Full Truck Load & Part Load services across India. Delivering trust and speed since 2010.
+            </p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+        <div class="footer-col links-col">
+            <h3>Quick Links</h3>
+            <ul class="footer-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="tracking.html">Track Shipment</a></li>
+                <li><a href="contact.html">Contact Support</a></li>
+            </ul>
+        </div>
+        <div class="footer-col contact-col">
+            <h3>Get In Touch</h3>
+            <ul class="contact-info">
+                <!-- Phone -->
+                <li>
+                    <div class="icon-box"><i class="fas fa-phone-alt icon"></i></div>
+                    <div class="text">
+                        <span>Call Us:</span>
+                        <a href="tel:9306503035">+91 93065 03035</a>
+                    </div>
+                </li>
+                 <!-- Email -->
+                <li>
+                    <div class="icon-box"> <i class="fas fa-envelope icon"></i></div>
+                    <div class="text">
+                        <span>Email Us:</span>
+                        <!-- Word break lagayenge taaki ye overlap na ho -->
+                        <a href="mailto:Sumittranslogistics580@gmail.com" class="email-link">Sumittranslogistics580@gmail.com</a>
+                    </div>
+                </li>
+                <!-- Address -->
+                <li>
+                    <div class="icon-box"><i class="fas fa-map-marker-alt"></i></div>
+                    <div class="text">
+                        <span>Head Office:</span>
+                        <p>Shop No. 5, Nihal Singh Market, Near Om Dharam Kanta, Tpt Nagar, Faridabad.</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Column 4: Newsletter -->
+        <div class="footer-col newsletter-col">
+            <h3>Newsletter</h3>
+            <p>Subscribe for latest logistics updates.</p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Your Email Address" required>
+                <button type="submit"><i class="fas fa-paper-plane"></i></button>
+            </form>
+        </div>
+
+    </div>
+
+    <!-- Copyright Strip -->
+    <div class="footer-bottom">
+        <p>&copy; 2025 <strong>Sumit Trans Logistics</strong>. All Rights Reserved.</p>
+        <div class="bottom-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" title="Go to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+</footer>
+<!-- PROFESSIONAL FULL SCREEN SEARCH OVERLAY -->
+<div id="full-screen-search" class="search-overlay">
+    <button class="close-search-btn" id="btn-close-search">&times;</button>
+    
+    <div class="search-center-box">
+        <h3 class="search-title">What are you looking for?</h3>
+        
+        <div class="search-input-group">
+            <i class="fas fa-search search-icon"></i>
+            <input type="text" id="site-search-input" placeholder="Type to search (e.g. Tracking, Freight)..." autocomplete="off">
+        </div>
+
+        <!-- Yahan Results aayenge -->
+        <div id="site-search-results" class="results-container"></div>
+    </div>
+</div>
+    <script src="script.js"></script>
+</body>
+</html>

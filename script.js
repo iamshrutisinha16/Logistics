@@ -466,3 +466,160 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 });
+
+/* express delivery */
+    document.addEventListener('DOMContentLoaded', () => {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('in-view');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        const animateElements = document.querySelectorAll('.slide-right, .slide-left, .fade-up');
+        animateElements.forEach(el => observer.observe(el));
+    });
+
+/* full road load */
+    document.addEventListener('DOMContentLoaded', () => {
+        const observerOptions = {
+            threshold: 0.15 
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target); 
+                }
+            });
+        }, observerOptions);
+
+        const elements = document.querySelectorAll('.slide-up');
+        elements.forEach(el => observer.observe(el));
+        
+        // Form Submit Alert (Demo)
+        document.querySelector('.ftl-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Requirement Submitted! Our transport manager will call you shortly.');
+        });
+    });
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const faqCards = document.querySelectorAll('.faq-card');
+
+        faqCards.forEach(card => {
+            const header = card.querySelector('.faq-header');
+            const body = card.querySelector('.faq-body');
+
+            header.addEventListener('click', () => {
+                const isOpen = card.classList.contains('active');
+
+                // Close all others
+                faqCards.forEach(c => {
+                    c.classList.remove('active');
+                    c.querySelector('.faq-body').style.maxHeight = null;
+                });
+
+                // Open clicked one if not already open
+                if (!isOpen) {
+                    card.classList.add('active');
+                    body.style.maxHeight = body.scrollHeight + "px";
+                }
+            });
+        });
+    });
+
+    // --- 2. PREMIUM TESTIMONIAL SLIDER ---
+    const slides = document.querySelectorAll('.review-card');
+    const prevBtn = document.getElementById('prevTestimonial');
+    const nextBtn = document.getElementById('nextTestimonial');
+    let currentSlide = 0;
+
+    function showSlide(index) {
+        // Wrap around logic
+        if (index >= slides.length) currentSlide = 0;
+        else if (index < 0) currentSlide = slides.length - 1;
+        else currentSlide = index;
+
+        // Remove active class from all
+        slides.forEach(slide => {
+            slide.classList.remove('active-slide');
+        });
+
+        // Add active class to current
+        slides[currentSlide].classList.add('active-slide');
+    }
+
+    // Button Events
+    nextBtn.addEventListener('click', () => showSlide(currentSlide + 1));
+    prevBtn.addEventListener('click', () => showSlide(currentSlide - 1));
+
+    // Auto Play (Optional - 5 seconds)
+    setInterval(() => {
+        showSlide(currentSlide + 1);
+    }, 5000);
+
+/* services */
+ document.addEventListener('DOMContentLoaded', () => {
+        
+        // --- 1. SCROLL ANIMATION (Intersection Observer) ---
+        const observerOptions = {
+            threshold: 0.2 // Trigger when 20% of the element is visible
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                    // Stop observing once shown
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        const hiddenElements = document.querySelectorAll('.hidden');
+        hiddenElements.forEach((el) => observer.observe(el));
+
+
+        // --- 2. MODAL FUNCTIONALITY ---
+        const overlay = document.getElementById('modal-overlay');
+        const btns = document.querySelectorAll('.read-more-btn');
+        const closeBtns = document.querySelectorAll('.close-modal');
+        const modals = document.querySelectorAll('.service-modal');
+
+        // Function to open modal
+        btns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const targetId = btn.getAttribute('data-target');
+                const targetModal = document.getElementById(targetId);
+                
+                overlay.classList.add('modal-active');
+                targetModal.classList.add('modal-active');
+                document.body.style.overflow = 'hidden'; // Prevent background scrolling
+            });
+        });
+
+        // Function to close all modals
+        function closeAllModals() {
+            overlay.classList.remove('modal-active');
+            modals.forEach(modal => modal.classList.remove('modal-active'));
+            document.body.style.overflow = ''; // Restore scrolling
+        }
+
+        // Close via Close Button
+        closeBtns.forEach(btn => {
+            btn.addEventListener('click', closeAllModals);
+        });
+
+        // Close via Overlay Click
+        overlay.addEventListener('click', closeAllModals);
+
+        // Close via Escape Key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeAllModals();
+            }
+        });
+    });

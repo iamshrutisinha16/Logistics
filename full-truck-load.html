@@ -100,115 +100,187 @@
 
         </div>
     </div>
-
 </header>
-<!-- Search Overlay (Hidden by Default) -->
-<div id="search-overlay" class="search-overlay">
-    <div class="search-container">
-        <span class="close-search" onclick="toggleSearch()">&times;</span>
-        <div class="search-wrapper">
-            <input type="text" id="search-input" placeholder="Type here to search..." onkeypress="handleEnter(event)">
-            <button onclick="performSearch()"><i class="fas fa-search"></i></button>
-        </div>
-        <p class="search-note">Press Enter to search</p>
-    </div>
-</div>
-<!-- ABOUT US SECTION WRAPPER -->
-<div class="stl-about-wrapper">
+<!-- FTL PAGE WRAPPER -->
+<div class="ftl-wrapper">
 
-    <!-- 1. Video Banner Section -->
-    <div class="stl-banner">
-        
-        <!-- Video Tag Added Here -->
-        <video autoplay muted loop playsinline class="banner-video">
-            <!-- Logistics/Truck Video URL -->
-            <source src="https://videos.pexels.com/video-files/2883069/2883069-hd_1920_1080_30fps.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-
-        <div class="banner-overlay"></div>
-        
-        <div class="banner-content scroll-animate">
-            <span class="badge">EST. 2010</span>
-            <h1>Leading The Way In Logistics</h1>
-            <p>Sumit Trans Logistics: Delivering Trust Across India.</p>
-        </div>
-    </div>
-    
-</div>
-    <!-- 2. Proprietor & Story Section -->
-    <div class="stl-section-container">
-        <div class="stl-split-layout">
-            
-            <!-- Left: Text Content -->
-            <div class="stl-text-col scroll-animate">
-                <h4 class="blue-tag">ABOUT US</h4>
-                <h2>We Move Your Business <br><span>Forward.</span></h2>
+    <!-- Section 1: Hero Section (Industrial Look) -->
+    <section class="ftl-hero">
+        <div class="ftl-overlay"></div>
+        <div class="ftl-container hero-flex">
+            <div class="ftl-hero-content slide-up">
+                <span class="ftl-badge"><i class="fas fa-truck-moving"></i> Nationwide Network</span>
+                <h1>Full Truck Load <br><span class="yellow-text">Solutions</span></h1>
+                <p>Jab shipment bada ho, toh humara network bhi bada hai. 9 MT se lekar 32 MT tak, humare paas har size ke truck available hain. Pan-India Dedicated Service.</p>
                 
-                <p class="main-desc">
-                    Welcome to <strong>Sumit Trans Logistics (STL)</strong>. We are a premier logistics solution provider based in Pune, dedicated to transporting goods safely and efficiently across the nation.
-                </p>
-                <p class="sub-desc">
-                    Founded by <strong>Mr. Kuldeep Singh</strong>, STL was built on a simple promise: <em>"Any load, Any where, On Time."</em> From heavy industrial machinery (Full Truck Load) to smaller commercial parcels (Part Load), we handle it all with professional expertise.
-                </p>
+                <div class="ftl-stats-row">
+                    <div class="stat-box">
+                        <strong>1500+</strong>
+                        <span>Trucks Fleet</span>
+                    </div>
+                    <div class="stat-box">
+                        <strong>28</strong>
+                        <span>States Covered</span>
+                    </div>
+                </div>
 
-                <!-- Proprietor Quote Box -->
-                <div class="proprietor-box">
-                    <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
-                    <p>"Our trucks don't just carry goods; they carry the trust of our clients. Safety and timing are our non-negotiable pillars."</p>
-                    <div class="proprietor-sign">
-                        <strong>- Kuldeep Singh</strong>
-                        <span>Proprietor, STL</span>
+                <a href="#quote-section" class="ftl-btn">Get FTL Quote</a>
+            </div>
+        </div>
+        <!-- Scroll Down Indicator -->
+        <div class="scroll-indicator">
+            <span>Scroll</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- Section 2: Fleet Types (Card Grid) -->
+    <section class="ftl-fleet">
+        <div class="ftl-container">
+            <div class="section-head slide-up">
+                <h2>Choose Your Vehicle</h2>
+                <div class="bar-accent"></div>
+                <p>Aapke load ke hisaab se perfect truck size choose karein.</p>
+            </div>
+
+            <div class="fleet-grid">
+                <!-- Truck 1 -->
+                <div class="fleet-card slide-up">
+                    <div class="card-img">
+                        <img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Large Container Truck">
+                        <div class="capacity-tag">32 Feet MXL</div>
+                    </div>
+                    <div class="card-body">
+                        <h3>Multi-Axle Container</h3>
+                        <ul>
+                            <li><i class="fas fa-weight-hanging"></i> Cap: 15-20 Ton</li>
+                            <li><i class="fas fa-cube"></i> High Volume Goods</li>
+                            <li><i class="fas fa-lock"></i> Secure & Sealed</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Truck 2 -->
+                <div class="fleet-card slide-up delay-1">
+                    <div class="card-img">
+                        <img src="https://images.unsplash.com/photo-1586191582116-3e0e7a46de58?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Open Body Truck">
+                        <div class="capacity-tag">Open Body</div>
+                    </div>
+                    <div class="card-body">
+                        <h3>Open Body Truck</h3>
+                        <ul>
+                            <li><i class="fas fa-weight-hanging"></i> Cap: 9-25 Ton</li>
+                            <li><i class="fas fa-industry"></i> Machinery & Metal</li>
+                            <li><i class="fas fa-tarpaulin"></i> Waterproof Sheets</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Truck 3 -->
+                <div class="fleet-card slide-up delay-2">
+                    <div class="card-img">
+                        <img src="https://images.unsplash.com/photo-1596767746738-4b77dc4e7497?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Trailer Truck">
+                        <div class="capacity-tag">Low Bed Trailer</div>
+                    </div>
+                    <div class="card-body">
+                        <h3>Heavy Duty Trailer</h3>
+                        <ul>
+                            <li><i class="fas fa-weight-hanging"></i> Cap: 25-40 Ton</li>
+                            <li><i class="fas fa-project-diagram"></i> ODC Consignments</li>
+                            <li><i class="fas fa-road"></i> Long Haul Expert</li>
+                        </ul>
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <!-- Right: Image Composition -->
-            <div class="stl-image-col scroll-animate">
-                <div class="main-image">
-                    <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=800&auto=format&fit=crop" alt="STL Logistics Truck">
+    <!-- Section 3: Why FTL (Horizontal Layout) -->
+    <section class="ftl-benefits">
+        <div class="ftl-container">
+            <div class="benefits-wrapper">
+                <div class="benefits-img slide-up">
+                    <img src="https://images.unsplash.com/photo-1580674684081-7617fbf3d745?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Logistics Worker">
+                    <div class="exp-box">
+                        <strong>10+</strong> Years in FTL
+                    </div>
                 </div>
-                <!-- Floating Badge -->
-                <div class="experience-badge">
-                    <span class="years">12+</span>
-                    <span class="text">Years of<br>Excellence</span>
+                <div class="benefits-content slide-up">
+                    <h2>Why choose Full Truck Load?</h2>
+                    <p>FTL sabse economical aur surakshit tarika hai bulk goods transport karne ka.</p>
+                    
+                    <div class="benefit-item">
+                        <div class="b-icon"><i class="fas fa-route"></i></div>
+                        <div>
+                            <h4>Direct Route (Point to Point)</h4>
+                            <p>Truck sidha pickup se delivery point jata hai, beech mein koi trans-shipment nahi.</p>
+                        </div>
+                    </div>
+
+                    <div class="benefit-item">
+                        <div class="b-icon"><i class="fas fa-stopwatch"></i></div>
+                        <div>
+                            <h4>Faster Transit Time</h4>
+                            <p>Kyunki load share nahi hota, isliye delivery time 30% fast hota hai.</p>
+                        </div>
+                    </div>
+
+                    <div class="benefit-item">
+                        <div class="b-icon"><i class="fas fa-hand-holding-usd"></i></div>
+                        <div>
+                            <h4>Cost Effective</h4>
+                            <p>Full truck book karne par per-unit cost kam aati hai compared to PTL.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <!-- 3. Why Choose Us (Features) -->
-    <div class="stl-features-bg">
-        <div class="stl-section-container">
-            <div class="features-grid">
-                <!-- Box 1 -->
-                <div class="feature-box scroll-animate">
-                    <i class="fas fa-shipping-fast"></i>
-                    <h3>Fast Delivery</h3>
-                    <p>Optimized routes ensuring your consignment reaches on time, every time.</p>
+    <!-- Section 4: Request Quote Form (Dark Industrial Style) -->
+    <section id="quote-section" class="ftl-quote-section slide-up">
+        <div class="ftl-container">
+            <div class="quote-box">
+                <div class="quote-header">
+                    <h3><i class="fas fa-calculator"></i> Get FTL Estimate</h3>
+                    <p>Fill details to get instant truck availability & rates.</p>
                 </div>
-                <!-- Box 2 -->
-                <div class="feature-box scroll-animate">
-                    <i class="fas fa-shield-alt"></i>
-                    <h3>Safe Handling</h3>
-                    <p>Professional loading and unloading to prevent any damage to your goods.</p>
-                </div>
-                <!-- Box 3 -->
-                <div class="feature-box scroll-animate">
-                    <i class="fas fa-globe-asia"></i>
-                    <h3>Pan India</h3>
-                    <p>Connecting Pune's industrial hubs to every corner of the country.</p>
-                </div>
+                <form class="ftl-form">
+                    <div class="form-group">
+                        <label>Pickup City</label>
+                        <input type="text" placeholder="Ex: Mumbai, Bhiwandi">
+                    </div>
+                    <div class="form-group">
+                        <label>Drop City</label>
+                        <input type="text" placeholder="Ex: Delhi, Okhla">
+                    </div>
+                    <div class="form-group">
+                        <label>Material Type</label>
+                        <select>
+                            <option>General Goods</option>
+                            <option>Machinery</option>
+                            <option>Chemicals</option>
+                            <option>Textiles</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Truck Type</label>
+                        <select>
+                            <option>32 Ft Container</option>
+                            <option>Open Body</option>
+                            <option>Trailer</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="submit-btn">Check Rates</button>
+                </form>
             </div>
         </div>
-    </div>
+    </section>
 
 </div>
-  <!-- FOOTER SECTION START -->
+<!-- FOOTER -->
 <footer class="stl-footer">
     <div class="footer-container">
-        
-        <!-- Column 1: Company Info -->
         <div class="footer-col about-col">
             <div class="footer-logo">
                 <h2>STL <span>Logistics</span></h2>
@@ -242,7 +314,7 @@
             <ul class="contact-info">
                 <!-- Phone -->
                 <li>
-                    <div class="icon-box"><i class="fas fa-phone-alt"></i></div>
+                    <div class="icon-box"><i class="fas fa-phone-alt icon"></i></div>
                     <div class="text">
                         <span>Call Us:</span>
                         <a href="tel:9306503035">+91 93065 03035</a>
@@ -250,7 +322,7 @@
                 </li>
                  <!-- Email -->
                 <li>
-                    <div class="icon-box"><i class="fas fa-envelope"></i></div>
+                    <div class="icon-box"> <i class="fas fa-envelope icon"></i></div>
                     <div class="text">
                         <span>Email Us:</span>
                         <!-- Word break lagayenge taaki ye overlap na ho -->

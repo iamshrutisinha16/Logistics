@@ -102,109 +102,114 @@
     </div>
 
 </header>
-<!-- Search Overlay (Hidden by Default) -->
-<div id="search-overlay" class="search-overlay">
-    <div class="search-container">
-        <span class="close-search" onclick="toggleSearch()">&times;</span>
-        <div class="search-wrapper">
-            <input type="text" id="search-input" placeholder="Type here to search..." onkeypress="handleEnter(event)">
-            <button onclick="performSearch()"><i class="fas fa-search"></i></button>
-        </div>
-        <p class="search-note">Press Enter to search</p>
-    </div>
-</div>
-<!-- ABOUT US SECTION WRAPPER -->
-<div class="stl-about-wrapper">
+<!-- EXPRESS DELIVERY PAGE WRAPPER -->
+<div class="express-page-wrapper">
 
-    <!-- 1. Video Banner Section -->
-    <div class="stl-banner">
-        
-        <!-- Video Tag Added Here -->
-        <video autoplay muted loop playsinline class="banner-video">
-            <!-- Logistics/Truck Video URL -->
-            <source src="https://videos.pexels.com/video-files/2883069/2883069-hd_1920_1080_30fps.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-
-        <div class="banner-overlay"></div>
-        
-        <div class="banner-content scroll-animate">
-            <span class="badge">EST. 2010</span>
-            <h1>Leading The Way In Logistics</h1>
-            <p>Sumit Trans Logistics: Delivering Trust Across India.</p>
-        </div>
-    </div>
-    
-</div>
-    <!-- 2. Proprietor & Story Section -->
-    <div class="stl-section-container">
-        <div class="stl-split-layout">
-            
-            <!-- Left: Text Content -->
-            <div class="stl-text-col scroll-animate">
-                <h4 class="blue-tag">ABOUT US</h4>
-                <h2>We Move Your Business <br><span>Forward.</span></h2>
-                
-                <p class="main-desc">
-                    Welcome to <strong>Sumit Trans Logistics (STL)</strong>. We are a premier logistics solution provider based in Pune, dedicated to transporting goods safely and efficiently across the nation.
-                </p>
-                <p class="sub-desc">
-                    Founded by <strong>Mr. Kuldeep Singh</strong>, STL was built on a simple promise: <em>"Any load, Any where, On Time."</em> From heavy industrial machinery (Full Truck Load) to smaller commercial parcels (Part Load), we handle it all with professional expertise.
-                </p>
-
-                <!-- Proprietor Quote Box -->
-                <div class="proprietor-box">
-                    <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
-                    <p>"Our trucks don't just carry goods; they carry the trust of our clients. Safety and timing are our non-negotiable pillars."</p>
-                    <div class="proprietor-sign">
-                        <strong>- Kuldeep Singh</strong>
-                        <span>Proprietor, STL</span>
+    <!-- Section 1: Dynamic Slanted Hero (New Style) -->
+    <section class="ex-hero">
+        <div class="ex-container">
+            <div class="ex-hero-text slide-right">
+                <span class="ex-tag">🚀 Next-Gen Logistics</span>
+                <h1>Superfast <span class="highlight-text">Express</span> Delivery</h1>
+                <p>Hum samajhte hain ki aapke liye har minute kimti hai. Same-day delivery aur priority handling ke sath, aapka business kabhi nahi rukega.</p>
+                <div class="ex-action-group">
+                    <a href="#" class="ex-btn-main">Book Now <i class="fas fa-arrow-right"></i></a>
+                    <div class="ex-play-video">
+                        <div class="play-btn"><i class="fas fa-play"></i></div>
+                        <span>See Process</span>
                     </div>
                 </div>
             </div>
-
-            <!-- Right: Image Composition -->
-            <div class="stl-image-col scroll-animate">
-                <div class="main-image">
-                    <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=800&auto=format&fit=crop" alt="STL Logistics Truck">
-                </div>
-                <!-- Floating Badge -->
-                <div class="experience-badge">
-                    <span class="years">12+</span>
-                    <span class="text">Years of<br>Excellence</span>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- 3. Why Choose Us (Features) -->
-    <div class="stl-features-bg">
-        <div class="stl-section-container">
-            <div class="features-grid">
-                <!-- Box 1 -->
-                <div class="feature-box scroll-animate">
-                    <i class="fas fa-shipping-fast"></i>
-                    <h3>Fast Delivery</h3>
-                    <p>Optimized routes ensuring your consignment reaches on time, every time.</p>
-                </div>
-                <!-- Box 2 -->
-                <div class="feature-box scroll-animate">
-                    <i class="fas fa-shield-alt"></i>
-                    <h3>Safe Handling</h3>
-                    <p>Professional loading and unloading to prevent any damage to your goods.</p>
-                </div>
-                <!-- Box 3 -->
-                <div class="feature-box scroll-animate">
-                    <i class="fas fa-globe-asia"></i>
-                    <h3>Pan India</h3>
-                    <p>Connecting Pune's industrial hubs to every corner of the country.</p>
+            <div class="ex-hero-image slide-left">
+                <!-- Is image ko change kar lena -->
+                <img src="https://img.freepik.com/free-photo/delivery-concept-handsome-african-american-delivery-man-carrying-package-box-isolated-grey-studio-background-copy-space_1258-1217.jpg" alt="Fast Delivery Man">
+                <div class="floating-card">
+                    <i class="fas fa-box-check"></i>
+                    <div>
+                        <strong>Status:</strong>
+                        <span>Out for Delivery</span>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+        <!-- Decorative Background Shape -->
+        <div class="ex-bg-shape"></div>
+    </section>
 
+    <!-- Section 2: Live Stats Bar (High Tech Look) -->
+    <section class="ex-stats-bar fade-up">
+        <div class="ex-container stats-grid">
+            <div class="stat-item">
+                <h2><span class="counter">30</span>min</h2>
+                <p>Pickup Time</p>
+            </div>
+            <div class="stat-item">
+                <h2><span class="counter">250</span>+</h2>
+                <p>Express Cities</p>
+            </div>
+            <div class="stat-item">
+                <h2><span class="counter">99.9</span>%</h2>
+                <p>On-Time Rate</p>
+            </div>
+            <div class="stat-item highlight-stat">
+                <i class="fas fa-headset"></i>
+                <p>24/7 Priority Support</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Services with Hover Effect (Glassmorphism) -->
+    <section class="ex-services">
+        <div class="ex-container">
+            <div class="section-header center-text fade-up">
+                <h2>Tailored for Speed</h2>
+                <p>Alag-alag zarooraton ke liye alag express modes.</p>
+            </div>
+            
+            <div class="services-grid-new">
+                <!-- Service 1 -->
+                <div class="ex-service-box fade-up">
+                    <div class="svc-icon orange-bg"><i class="fas fa-plane-departure"></i></div>
+                    <h3>Air Priority</h3>
+                    <p>India ke major cities mein agle din subah tak delivery guarantee.</p>
+                    <a href="#" class="read-more">Learn more &rarr;</a>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="ex-service-box fade-up delay-1">
+                    <div class="svc-icon blue-bg"><i class="fas fa-shipping-fast"></i></div>
+                    <h3>Hyperlocal</h3>
+                    <p>Shehar ke andar (Intra-city) bike se 4 ghante mein delivery.</p>
+                    <a href="#" class="read-more">Learn more &rarr;</a>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="ex-service-box fade-up delay-2">
+                    <div class="svc-icon dark-bg"><i class="fas fa-train"></i></div>
+                    <h3>Rail Express</h3>
+                    <p>Bhari saman ke liye tez aur kifayati train network solutions.</p>
+                    <a href="#" class="read-more">Learn more &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Tracking Banner (Unique Design) -->
+    <section class="ex-tracking-banner fade-up">
+        <div class="ex-container tracking-flex">
+            <div class="track-text">
+                <h2>Track your shipment <br> in Real-Time</h2>
+                <p>Live GPS updates ke sath dekhein apna packet map par chalte hue.</p>
+            </div>
+            <div class="track-input-box">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Enter AWB / Order ID...">
+                <button>Track</button>
+            </div>
+        </div>
+    </section>
 </div>
-  <!-- FOOTER SECTION START -->
+   <!-- FOOTER SECTION START -->
 <footer class="stl-footer">
     <div class="footer-container">
         
@@ -242,7 +247,7 @@
             <ul class="contact-info">
                 <!-- Phone -->
                 <li>
-                    <div class="icon-box"><i class="fas fa-phone-alt"></i></div>
+                    <div class="icon-box"><i class="fas fa-phone-alt icon"></i></div>
                     <div class="text">
                         <span>Call Us:</span>
                         <a href="tel:9306503035">+91 93065 03035</a>
@@ -250,7 +255,7 @@
                 </li>
                  <!-- Email -->
                 <li>
-                    <div class="icon-box"><i class="fas fa-envelope"></i></div>
+                    <div class="icon-box"> <i class="fas fa-envelope icon"></i></div>
                     <div class="text">
                         <span>Email Us:</span>
                         <!-- Word break lagayenge taaki ye overlap na ho -->
